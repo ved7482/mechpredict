@@ -1,0 +1,48 @@
+{
+  "source": "User-supplied model artifacts",
+  "scikit_learn_serialized_version": "1.6.1",
+  "input_features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "artifacts": [
+    {
+      "file": "decision_tree_model.pkl",
+      "size_bytes": 27193,
+      "sha256": "18298064f4743da51a289cf5867c53d841a0f9d056b38cbdd153be0a6500e6a0",
+      "estimator_type": "DecisionTreeClassifier",
+      "n_features_in": 5,
+      "feature_names_in": [
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]"
+      ]
+    },
+    {
+      "file": "improved_random_forest.pkl",
+      "size_bytes": 4741497,
+      "sha256": "bbe65e8a1f19c7ffcd59b9cc98c94cade41f424395277e71fba5261b26a0e0d4",
+      "estimator_type": "RandomForestClassifier",
+      "n_features_in": 5,
+      "feature_names_in": [
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]"
+      ],
+      "n_estimators": 200
+    },
+    {
+      "file": "failure_threshold.pkl",
+      "size_bytes": 21,
+      "sha256": "fa9d28a6ad8a27a24aea032331974cd6dca49c69dde03fb30c2c4517a8c6f90c",
+      "value": 0.4
+    }
+  ]
+}
