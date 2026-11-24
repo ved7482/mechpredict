@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import math
 import sqlite3
 import uuid
@@ -30,7 +31,12 @@ DATA_PATH = BASE_DIR / "data" / "ai4i2020.csv"
 DECISION_TREE_PATH = MODEL_DIR / "decision_tree_model.pkl"
 RANDOM_FOREST_PATH = MODEL_DIR / "improved_random_forest.pkl"
 THRESHOLD_PATH = MODEL_DIR / "failure_threshold.pkl"
-DB_PATH = BASE_DIR / "data" / "prediction_history.db"
+
+# Database path
+if os.getenv("VERCEL"):
+    DB_PATH = Path("/tmp/prediction_history.db")
+else:
+    DB_PATH = BASE_DIR / "data" / "prediction_history.db"
 
 FEATURES = [
     "Air temperature [K]",
